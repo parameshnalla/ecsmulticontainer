@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    image: sbpraonalla/ajnatest:latest
+    ports:
+      - "7999:7999"
+    depends_on:
+      - redis
+  redis:
+    image: "redis:alpine"
